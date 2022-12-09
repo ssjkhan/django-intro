@@ -34,20 +34,21 @@ def home(req):
 
 def allFriends(req):
     data = models.Friend.objects.all()
-    print(data)
-    return render(req, )
+    return render(req, 'friends/index.html')
 
 def viewFriend(req):
-    pass
+    return render(req, 'friends/detail.html')
 
 def addFriend(req):
-    pass
+    return render(req, 'friends/detail.html')
 
 def allFoods(req):
-    pass
+    return render(req, 'foods/index.html')
+    
 
 def viewFood(req):
-    pass
+    return render(req, 'foods/detail.html')
 
 def addFood(req):
-    pass
+    return render(req, 'foods/add.html')
+    
