@@ -11,17 +11,17 @@ def home(req):
 def allFriends(req):
     pass
 
-def allHobbies(req):
+def viewFriend(req):
     pass
 
 def addFriend(req):
     pass
 
-def addHobby(req):
+def allFoods(req):
     pass
 
-def viewFriend(req):
+def viewFood(req):
     pass
 
-def viewHobby(req):
+def addFood(req):
     pass
