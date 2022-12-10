@@ -13,6 +13,35 @@
 		<title>{% block title %} Collector's Lab {% endblock %}</title>
 	</head>
 	<body>
+		<header class="navbar-fixed">
+			<nav>
+				<p><strong> Navigation </strong></p>
+				<div class="nav-wrapper">
+					<ul>
+						<li>
+							<a
+								href="/"
+								class="left brand-logo"
+								>Home</a
+							>
+						</li>
+						{% if user.is_authenticated %}
+						<li><a href="{% url 'addFriend' %}">Add a Friend</a></li>
+						<li><a href="{% url 'viewFriends' %}">View all Friends</a></li>
+						<li><a href="{% url 'addFood' %}">Add a Food</a></li>
+						<li><a href="{% url 'viewFoods' %}">View All Foods</a></li>
+						<li><a href="{% url 'logout' %}">Log Out</a></li>
+						{% else %}
+						<li><a href="{% url 'signup' %}">Sign Up</a></li>
+						<li><a href="{% url 'login' %}">Log In</a></li>
+						{% endif %}
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div>
+			<p><strong>Content</strong></p>
+		</div>
 		{% block content %}{% endblock %}
 	</body>
 </html>

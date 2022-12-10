@@ -28,6 +28,10 @@ def signup(req):
     
     return render(req, 'registration/signup.html', context)
 
+def login(req):
+
+    return render(req, 'registration/login.html')
+
 def home(req):
     # return (req, )
     return render(req, 'home.html')
