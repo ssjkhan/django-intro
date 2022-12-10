@@ -1,3 +1,27 @@
 {% extends 'base.html' %} {% block content %}
-<p>THIS IS FRIENDS INDEX</p>
+<p>Friends List</p>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>FavFoods</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for friend, favFoods in context %}
+		<a href="{% url 'detailFriend' friend.id %}">
+			<tr>
+				<td>{{friend.name}}</td>
+				<td>
+					<ul>
+						{% for food in favFoods %}
+						<li>{{food.name}}</li>
+						{% endfor %}
+					</ul>
+				</td>
+			</tr>
+		</a>
+		{% endfor %}
+	</tbody>
+</table>
 {% endblock %}

@@ -1,3 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-<p>THIS IS FRIENDS DETAIL</p>
+<h1>Friend Details</h1>
+<h2>{{friend.name}}</h2>
+<h3>FavFoods</h3>
+<ul>
+	{% for food in friend.favFoods%}
+	<li>{{food}}</li>
+	{% endfor %}
+</ul>
+<a href="">DELETE FRIEND</a>
 {% endblock %}
