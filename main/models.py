@@ -11,11 +11,11 @@ class Friend(models.Model):
     favFoods = models.ManyToManyField("Food")
 
     def __str__(self):
-        return f"PK: {self.id} name: {self.name}"
+        return f"{self.name} is a friend of mine"
         
 class Food(models.Model):
     name = models.TextField()
     flavour = models.TextField()
 
     def __str__(self):
-        return f"PK: {self.id} name: {self.name}:"
+        return f"name: {self.name}\t flavour: {self.flavour}"
