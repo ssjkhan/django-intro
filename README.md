@@ -1,6 +1,6 @@
 # django-intro
 
-Quick project to explore django's many features, includingl;
+Quick project to explore django's many features, including;
 
 - authentication (and authorization), function views, class based views (generics, forms, models), the ORM (foreign Keys, ManytoMany, string representation, psql backend, django templating, django app structure and routing.
 
